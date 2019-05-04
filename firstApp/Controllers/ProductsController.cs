@@ -15,10 +15,11 @@ namespace firstApp.Controllers
     {
 
         private ProductsDbContext context;
-        public ProductsController (ProductsDbContext context)
+        public ProductsController(ProductsDbContext context)
         {
             this.context = context;
         }
+
         // GET: api/Products
         [HttpGet]
         public IEnumerable<Product> Get()
@@ -45,7 +46,7 @@ namespace firstApp.Controllers
         {
             context.Products.Add(product);
             context.SaveChanges();
-            
+
         }
 
         // PUT: api/Products/5
